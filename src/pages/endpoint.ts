@@ -1,5 +1,7 @@
 import type { APIRoute } from "astro";
 
+export const prerender = false;
+
 export const GET: APIRoute = ({ request }) => {
   const searchParams = new URL(request.url).searchParams;
   const queryParams = [...searchParams.keys()].reduce(
