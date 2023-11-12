@@ -1,18 +1,19 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import type { MDXLayoutProps } from "astro";
 
-type Props = MDXLayoutProps<{
-  title: string;
-  pubDate: Date;
-  description: string;
-  author: string;
-  image: {
-    url: string;
-    alt: string;
+type Props = {
+  frontmatter: {
+    title: string;
+    pubDate: Date;
+    description: string;
+    author: string;
+    image: {
+      url: string;
+      alt: string;
+    };
+    tags: string[];
   };
-  tags: string[];
-}>;
+};
 
 const { frontmatter } = Astro.props;
 ---
